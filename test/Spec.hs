@@ -213,5 +213,5 @@ readDsaPubKey bs =
 
 readCSR bs =
   case fromDER bs of
-    Right (scr @ SignedCertificationRequest {}) -> scr
+    Right (scr@SignedCertificationRequest {}) -> scr
     Left e -> error . show $ e
